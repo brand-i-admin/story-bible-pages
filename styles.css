@@ -269,7 +269,7 @@ body.is-dialog-open {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 500px);
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 410px);
   gap: 22px;
   align-items: center;
   margin-top: 12px;
@@ -335,6 +335,8 @@ body.is-dialog-open {
 }
 
 .intro-visual {
+  justify-self: end;
+  width: 90%;
   min-width: 0;
   margin: 0;
   padding: 10px;
@@ -1914,7 +1916,7 @@ h1 {
   }
 
   .intro-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(104px, 34vw);
+    grid-template-columns: minmax(0, 1fr) minmax(86px, 28vw);
     gap: 10px 12px;
     align-items: center;
     margin-top: 0;
@@ -2005,7 +2007,7 @@ h1 {
     grid-column: 2;
     grid-row: 1 / span 5;
     align-self: center;
-    width: 100%;
+    width: 90%;
     padding: 5px;
     border-radius: 18px;
     background: rgba(255, 248, 238, 0.13);
