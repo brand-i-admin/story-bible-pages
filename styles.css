@@ -45,10 +45,6 @@ body::before {
   opacity: 0.18;
 }
 
-body.is-dialog-open {
-  overflow: hidden;
-}
-
 .page {
   position: relative;
 }
@@ -1281,94 +1277,6 @@ h1 {
   color: #355324;
   cursor: default;
   pointer-events: none;
-}
-
-.release-dialog[hidden] {
-  display: none;
-}
-
-.release-dialog {
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-  background: rgba(35, 22, 12, 0.62);
-  backdrop-filter: blur(8px);
-}
-
-.release-dialog-panel {
-  position: relative;
-  width: min(100%, 390px);
-  padding: 26px;
-  border: 1px solid rgba(151, 117, 72, 0.34);
-  border-radius: 22px;
-  background: #fff7ea;
-  box-shadow: 0 28px 70px rgba(20, 12, 5, 0.32);
-}
-
-.release-dialog-panel .eyebrow {
-  margin-bottom: 10px;
-  color: #7ba85a;
-}
-
-.release-dialog-panel h2 {
-  margin: 0;
-  padding-right: 36px;
-  font-size: 24px;
-  line-height: 1.2;
-  color: var(--hero-brown);
-}
-
-.release-dialog-panel p:not(.eyebrow) {
-  margin: 12px 0 0;
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.7;
-  color: #5b472a;
-}
-
-.dialog-close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  padding: 0;
-  border: 1px solid rgba(151, 117, 72, 0.2);
-  border-radius: 999px;
-  background: rgba(251, 244, 232, 0.88);
-  color: #5b472a;
-  cursor: pointer;
-}
-
-.dialog-close:hover,
-.dialog-close:focus-visible {
-  border-color: rgba(123, 168, 90, 0.42);
-  color: #355324;
-}
-
-.dialog-close svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.dialog-actions {
-  display: flex;
-  margin-top: 18px;
-}
-
-.dialog-actions .button-link {
-  width: 100%;
 }
 
 .footer {

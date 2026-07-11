@@ -99,11 +99,12 @@
                     <small>이야기 성경 보기</small>
                   </span>
                 </a>
-                <button
+                <a
                   class="store-button store-button-secondary"
-                  type="button"
-                  data-android-wait
-                  aria-label="Google Play 배포 준비중 알림 보기"
+                  href="https://play.google.com/store/apps/details?id=com.storybible.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Google Play에서 이야기 성경 다운로드"
                 >
                   <svg class="store-icon" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8 5v14l11-7z" />
@@ -111,9 +112,9 @@
                   </svg>
                   <span>
                     <strong>Google Play</strong>
-                    <small>Android 준비중</small>
+                    <small>Android 다운로드</small>
                   </span>
-                </button>
+                </a>
               </div>
             </div>
             <div class="map-hero-panel">
@@ -349,58 +350,5 @@
         </div>
       </section>
     </main>
-    <div
-      class="release-dialog"
-      data-android-dialog
-      hidden
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="android-dialog-title"
-    >
-      <div class="release-dialog-panel">
-        <button class="dialog-close" type="button" data-android-close aria-label="팝업 닫기">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 6l12 12" />
-            <path d="M18 6 6 18" />
-          </svg>
-        </button>
-        <p class="eyebrow">Google Play</p>
-        <h2 id="android-dialog-title">안드로이드 배포 준비중</h2>
-        <p>안드로이드 앱은 현재 배포 준비중입니다.</p>
-        <div class="dialog-actions">
-          <button class="button-link primary" type="button" data-android-close>확인</button>
-        </div>
-      </div>
-    </div>
-    <script>
-      const androidButton = document.querySelector("[data-android-wait]");
-      const androidDialog = document.querySelector("[data-android-dialog]");
-
-      if (androidButton && androidDialog) {
-        const closeAndroidDialog = () => {
-          androidDialog.hidden = true;
-          document.body.classList.remove("is-dialog-open");
-          androidButton.focus();
-        };
-
-        androidButton.addEventListener("click", () => {
-          androidDialog.hidden = false;
-          document.body.classList.add("is-dialog-open");
-          androidDialog.querySelector("[data-android-close]").focus();
-        });
-
-        androidDialog.addEventListener("click", (event) => {
-          if (event.target === androidDialog || event.target.closest("[data-android-close]")) {
-            closeAndroidDialog();
-          }
-        });
-
-        document.addEventListener("keydown", (event) => {
-          if (event.key === "Escape" && !androidDialog.hidden) {
-            closeAndroidDialog();
-          }
-        });
-      }
-    </script>
   </body>
 </html>
